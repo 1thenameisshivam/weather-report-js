@@ -1,4 +1,4 @@
- let city_name="";
+let city_name="";
  
 
 (function loader(){
@@ -7,12 +7,15 @@
      })
 })();
 
-function displaydetails(){
+ async function displaydetails(){
     const key= "f8860b3a873942bbb5c182144231708";
     let url=`http://api.weatherapi.com/v1/current.json?key= ${key}&q=${city_name}&aqi=no`;
-    fetch(url).then((responce)=>{
-        return responce.json()
-    }).then((data)=>{
+    // fetch(url).then((responce)=>{
+    //     return responce.json()
+    // }).then((data)=>{
+
+        const data=await fetch(`${url}`).then
+        (response => response.json());
         console.log(data);
 
         let icon=data.current.condition.icon;
@@ -32,8 +35,10 @@ function displaydetails(){
         let feelslike_c=data.current.feelslike_c;
         let humidity=data.current.humidity;
         document.querySelector(".flk span").textContent=feelslike_c;
-        document.querySelector(".hum span").textContent=humidity; 
-    })
+        document.querySelector(".hum span").textContent=humidity;
+        
+        
+    // })
 
 }
 
