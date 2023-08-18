@@ -1,11 +1,8 @@
 let city_name="";
  
-
-(function loader(){
-     window.addEventListener("load" ,()=>{
+window.addEventListener("load" ,()=>{
         document.getElementById("loader").style.display="none"
      })
-})();
 
  async function displaydetails(){
     const key= "f8860b3a873942bbb5c182144231708";
