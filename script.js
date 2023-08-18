@@ -9,7 +9,7 @@ let city_name="";
 
  async function displaydetails(){
     const key= "f8860b3a873942bbb5c182144231708";
-    let url=`http://api.weatherapi.com/v1/current.json?key= ${key}&q=${city_name}&aqi=no`;
+    let url=`https://api.weatherapi.com/v1/current.json?key= ${key}&q=${city_name}&aqi=no`;
     // fetch(url).then((responce)=>{
     //     return responce.json()
     // }).then((data)=>{
